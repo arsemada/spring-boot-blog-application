@@ -1,1 +1,1 @@
-"# spring-boot-blog-application" 
+# 📝 Blog Web Application with Java Spring Boot 
