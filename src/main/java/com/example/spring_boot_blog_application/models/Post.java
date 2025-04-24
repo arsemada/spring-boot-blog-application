@@ -1,6 +1,7 @@
 package com.example.spring_boot_blog_application.models;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,6 +22,11 @@ public class Post {
     private String body;
 
     private LocalDateTime createdAt;
+
+    @NotNull
+    @ManyToOne
+    @JoinColumn(name = "account_id", referencedColumnName = "id", nullable = false)
+    private Account account;
 
 
 }
