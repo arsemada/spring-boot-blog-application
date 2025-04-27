@@ -5,13 +5,13 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Blog :: New Post</title>
+    <title>Blog :: Update Post</title>
 
     <!-- ADDED CSS STYLE -->
     <style>
         body {
             font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(to right, #e0f7fa, #ffffff);
+            background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
             margin: 0;
             padding: 0;
             color: #333;
@@ -22,21 +22,22 @@
             margin: 60px auto;
             background: #ffffff;
             padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
         }
 
         a {
             display: inline-block;
             margin-bottom: 20px;
             text-decoration: none;
-            color: #2575fc;
+            color: #5b4b8a;
             font-weight: bold;
+            font-size: 16px;
             transition: color 0.3s ease;
         }
 
         a:hover {
-            color: #6a11cb;
+            color: #1d3557;
         }
 
         form {
@@ -47,12 +48,13 @@
 
         h2 {
             text-align: center;
-            color: #2c3e50;
+            color: #3f3d56;
+            margin-bottom: 30px;
         }
 
         label {
             font-size: 14px;
-            color: #7f8c8d;
+            color: #666;
             margin-bottom: 6px;
         }
 
@@ -60,10 +62,10 @@
         textarea {
             width: 100%;
             padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
             font-size: 16px;
-            background-color: #fafafa;
+            background-color: #f9f9f9;
             resize: vertical;
         }
 
@@ -75,17 +77,16 @@
             background: linear-gradient(to right, #6a11cb, #2575fc);
             border: none;
             color: white;
-            padding: 12px 20px;
+            padding: 14px 20px;
             text-align: center;
-            text-decoration: none;
-            display: inline-block;
             font-size: 16px;
             font-weight: bold;
             border-radius: 30px;
             cursor: pointer;
             transition: background 0.3s ease;
-            width: 50%;
+            width: 60%;
             margin: 0 auto;
+            display: block;
         }
 
         button:hover {
@@ -109,12 +110,12 @@
 <div class="container">
     <a th:href="@{/}">Home</a>
     <form action="#"
-          th:action="@{'/posts/new'}"
+          th:action="@{'/posts/{id}'(id=${post.id})}"
           th:object="${post}"
           method="POST">
         <input type="hidden" th:field="*{account}" />
         <input type="hidden" th:field="*{createdAt}" />
-        <h2>Write new Post</h2>
+        <h2>Update Post</h2>
         <div>
             <label for="new-post-title">Title</label>
             <input id="new-post-title" type="text" th:field="*{title}" placeholder="Title"/>
