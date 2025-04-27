@@ -10,8 +10,8 @@
     <!-- ADDED CSS STYLE -->
     <style>
         body {
-            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f6f8;
             margin: 0;
             padding: 0;
             display: flex;
@@ -21,30 +21,31 @@
         }
 
         .container {
-            background: #fff;
-            padding: 40px 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            background: #ffffff;
+            padding: 30px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             width: 100%;
-            max-width: 400px;
+            max-width: 380px;
         }
 
         h1 {
             text-align: center;
-            color: #333;
-            margin-bottom: 20px;
+            color: #222;
+            margin-bottom: 15px;
+            font-size: 24px;
         }
 
         hr {
-            margin-bottom: 30px;
+            margin: 20px 0;
             border: none;
-            border-top: 2px solid #eee;
+            border-top: 1px solid #ddd;
         }
 
         form {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 15px;
         }
 
         .form-group {
@@ -53,44 +54,36 @@
         }
 
         label {
-            margin-bottom: 6px;
+            margin-bottom: 5px;
             font-size: 14px;
             color: #555;
         }
 
         input[type="text"],
         input[type="password"] {
-            padding: 12px 15px;
+            padding: 10px;
             border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 16px;
-            background-color: #f9f9f9;
+            border-radius: 5px;
+            font-size: 14px;
         }
 
         button {
-            background: linear-gradient(to right, #36d1dc, #5b86e5);
+            background-color: #4a90e2;
             border: none;
             color: white;
-            padding: 14px 20px;
-            text-align: center;
+            padding: 12px;
             font-size: 16px;
-            font-weight: bold;
-            border-radius: 30px;
+            font-weight: 500;
+            border-radius: 5px;
             cursor: pointer;
-            transition: background 0.3s ease;
+            transition: background-color 0.3s ease;
         }
 
         button:hover {
-            background: linear-gradient(to right, #5b86e5, #36d1dc);
-        }
-
-        @media (max-width: 500px) {
-            .container {
-                margin: 20px;
-                padding: 20px;
-            }
+            background-color: #357ab8;
         }
     </style>
+
 
 </head>
 <body>
